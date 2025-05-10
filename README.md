@@ -12,17 +12,17 @@ A modern starter template to build beautiful, fast, and cross-platform desktop a
 ## 📦 Getting Started
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/AhmedTrooper/tauriv2next15appshadcnreact19startertemplate.git
-cd tauriv2next15appshadcnreact19startertemplate
+- git clone https://github.com/AhmedTrooper/tauriv2next15appshadcnreact19startertemplate.git
+- cd tauriv2next15appshadcnreact19startertemplate
 
 ### 2️⃣ Install Dependencies
-npm install
+- npm install
 
 ### 3️⃣ Run in Development Mode
-npm run tauri dev
+- npm run tauri dev
 - Launches the app in a Tauri shell with hot reload 🔁
 ### 4️⃣ Build for Production
-npm run tauri build
+- npm run tauri build
 - Creates an optimized native app build 🚀
 
 ---
@@ -39,7 +39,7 @@ npm run tauri build
 
 ## 🤝 Contributing
 
-Found a bug or have an improvement idea? PRs are welcome!
+- Found a bug or have an improvement idea? PRs are welcome!
 
 ---
 
