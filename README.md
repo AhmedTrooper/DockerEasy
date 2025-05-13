@@ -1,53 +1,22 @@
-# 🚀 Tauri V2 + Next.js 15 + React 19 + Shadcn UI Starter Template
+# DockerEasy 🚀
 
-A modern starter template to build beautiful, fast, and cross-platform desktop apps with:
-
-- 🧱 **Tauri V2** – lightweight native app runtime
-- ⚛️ **React 19** – concurrent rendering, modern hooks
-- 🧭 **Next.js 15 App Router** – modular routing & server components
-- 🎨 **Shadcn UI** – clean, reusable Tailwind-styled components
+**DockerEasy** is a lightweight alternative to Docker Desktop, offering a simple interface to efficiently manage Docker containers. It allows developers to easily create, delete, attach, run, and manage containers, networks, ports, volumes, and more, without the complexity of Docker Desktop.
 
 ---
 
-## 📦 Getting Started
+## Features 🌟
 
-### 1️⃣ Clone the Repository
-- git clone https://github.com/AhmedTrooper/tauriv2next15appshadcnreact19startertemplate.git
-- cd tauriv2next15appshadcnreact19startertemplate
-
-### 2️⃣ Install Dependencies
-- npm install
-
-### 3️⃣ Run in Development Mode
-- npm run tauri dev
-- Launches the app in a Tauri shell with hot reload 🔁
-### 4️⃣ Build for Production
-- npm run tauri build
-- Creates an optimized native app build 🚀
+- **Create, Delete, Attach Containers** 🛠️: Effortlessly create and delete Docker containers, and attach to them for easy management.
+- **Run and Bind Containers** 🔗: Start containers with custom configurations, and bind them to networks, ports, and volumes.
+- **Network and Port Management** 🌐: Create, bind, and manage networks and ports directly from the interface.
+- **Volume Management** 💾: Handle Docker volumes seamlessly for persistent data storage.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack 🧰
 
-- ✅ **Tauri V2**
-- ✅ **React 19**
-- ✅ **Next.js 15 (App Router)**
-- ✅ **Shadcn UI**
-- ✅ **Tailwind CSS**
-
----
-
-## 🤝 Contributing
-
-- Found a bug or have an improvement idea? PRs are welcome!
-
----
-
-## 📜 License
-
-**MIT**
-
----
-
-Made with ❤️ by [AhmedTrooper](https://github.com/AhmedTrooper)
-
+- **Shadcn** 🎨
+- **TailwindCSS** 💅
+- **React 19** ⚛️
+- **Next.js 15 (TypeScript)** 📦
+- **Tauri v2** 🖥️
