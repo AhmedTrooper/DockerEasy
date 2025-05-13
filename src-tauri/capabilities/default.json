@@ -6,6 +6,28 @@
     "main"
   ],
   "permissions": [
-    "core:default"
+    "core:default",
+    "core:window:allow-close",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        {
+          "name": "docker",
+          "cmd": "docker",
+          "args": true
+        }
+      ]
+    },
+    {
+      "identifier": "shell:allow-spawn",
+      "allow": [
+        {
+          "name": "docker",
+          "cmd": "docker",
+          "args": true
+        }
+      ]
+    },
+    "shell:default"
   ]
 }
