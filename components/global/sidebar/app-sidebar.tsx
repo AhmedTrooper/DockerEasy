@@ -1,7 +1,21 @@
-"use client"
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "../ui/sidebar";
-import { Atom, Box, Calendar, CircleX, Cross, Home, Inbox, Search, Settings } from "lucide-react";
+"use client";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from "../../ui/sidebar";
+import { Atom, Box, Calendar, CircleX, Move, Settings } from "lucide-react";
 import { getCurrentWindow } from "@tauri-apps/api/window";
+import Link from "next/link";
+import DockerVersion from "./docker-version";
+import SidebarHeaderContent from "./sidebar-header-content";
 const items = [
   {
     title: "Images",
@@ -18,24 +32,27 @@ const items = [
     url: "/networks",
     icon: Calendar,
   },
-  
+
   {
     title: "Settings",
     url: "/settings",
     icon: Settings,
   },
-]
+];
 
-export default function AppSidebar(){
-  const handleApplicationClose = async () =>{
-try{
- await getCurrentWindow().close();
-} catch(e){
-console.log(e)
-}
-  }
-    return(
-         <Sidebar>
+export default function AppSidebar() {
+  const handleApplicationClose = async () => {
+    try {
+      await getCurrentWindow().close();
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  return (
+    <Sidebar>
+      <SidebarHeader  className="font-bold bg-blue-600">
+        <SidebarHeaderContent/>
+      </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel className="font-bold text-blue-600 text-3xl h-15 grid content-center">
@@ -47,11 +64,10 @@ console.log(e)
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
-                    
+                    </Link>
                   </SidebarMenuButton>
                   <hr />
                 </SidebarMenuItem>
@@ -61,8 +77,15 @@ console.log(e)
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="bg-red-600 grid items-start  text-white justify-items-center">
-        <CircleX className="cursor-pointer" onClick={handleApplicationClose} color="white" width={30} height={30}/>
+        <DockerVersion />
+        <CircleX
+          className="cursor-pointer"
+          onClick={handleApplicationClose}
+          color="white"
+          width={30}
+          height={30}
+        />
       </SidebarFooter>
     </Sidebar>
-    );
+  );
 }
