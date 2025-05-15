@@ -11,7 +11,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "../../ui/sidebar";
-import { Atom, Box, Calendar, CircleX, Move, Settings } from "lucide-react";
+import { Atom, Box, Calendar, CircleX, Settings } from "lucide-react";
 import { getCurrentWindow } from "@tauri-apps/api/window";
 import Link from "next/link";
 import DockerVersion from "./docker-version";
@@ -50,8 +50,8 @@ export default function AppSidebar() {
   };
   return (
     <Sidebar>
-      <SidebarHeader  className="font-bold bg-blue-600">
-        <SidebarHeaderContent/>
+      <SidebarHeader className="font-bold bg-blue-600">
+        <SidebarHeaderContent />
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>

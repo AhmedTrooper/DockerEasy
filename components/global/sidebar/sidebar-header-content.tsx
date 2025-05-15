@@ -16,7 +16,7 @@ export default function SidebarHeaderContent() {
 
   const handleMaximizeUnmaximize = async () => {
     try {
-      let isCurrentWindowMaximized = await getCurrentWindow().isMaximized();
+      const isCurrentWindowMaximized = await getCurrentWindow().isMaximized();
       if (!isCurrentWindowMaximized) {
         setUnmaximized(true);
         await getCurrentWindow().maximize();
@@ -40,17 +40,23 @@ export default function SidebarHeaderContent() {
   };
 
   return (
-    <div className="grid grid-cols-3 content-center items-centent">
+    <div className="grid w-fit  grid-cols-3 gap-3 justify-evenly">
       <div
-        className="cursor-pointer text-white"
+        className="w-fit cursor-pointer text-white"
         onClick={handleMaximizeUnmaximize}
       >
         {unMaximized ? <LucideMinimize2 /> : <MaximizeIcon />}
       </div>
-      <div onClick={handleMinimize} className="cursor-pointer text-white">
+      <div
+        onClick={handleMinimize}
+        className="w-fit  cursor-pointer text-white"
+      >
         <Minus />
       </div>
-      <div onMouseDown={dragWindowHandle} className="cursor-pointer text-white">
+      <div
+        onMouseDown={dragWindowHandle}
+        className="cursor-pointer w-fit text-white"
+      >
         <Move />
       </div>
     </div>
